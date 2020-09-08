@@ -8,7 +8,7 @@ const CONTACTS_KEY = "contacts"
 
 export default function Sidebar({ id }) {
     const [activeKey, setActiveKey] = useState(CONVERSATIONS_KEY)
-    
+
     return (
         <div style={{ width: "250px" }} className="d-flex flex-column">
             <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>
@@ -24,7 +24,7 @@ export default function Sidebar({ id }) {
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>
-                <Tab.Content>
+                <Tab.Content className="border-right overflow-auto flex-grow-1">
                     <Tab.Pane eventKey={CONVERSATIONS_KEY}>
                         <Conversations />
                     </Tab.Pane>
